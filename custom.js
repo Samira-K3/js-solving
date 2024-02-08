@@ -16,7 +16,13 @@ function checkName(name) {
         return "Bad name";
     }
 }
+// 3 nmb
+function filterNumbers(arr) {
+    // Filter out non-numeric elements and convert valid numbers to numbers
+    const filteredArray = arr.filter(item => typeof item === 'number' && !isNaN(item));
 
-console.log(checkNameEnding("Emily")); // Output: Good name
-console.log(checkNameEnding("John")); // Output: Bad name
-console.log(checkNameEnding("Henry")); // Output: Good name
+    return filteredArray;
+}
+let see = ['b', 'nmbm', 5, 6, 88, 9];
+console.log(filterNumbers(see));
+
